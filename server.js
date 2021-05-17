@@ -12,7 +12,7 @@ app.post('/', function(req, res) {
 	const weight = Number(req.body.weight);
 	const height = Number(req.body.height);
 
-	const BMI = (weight/(height*height)).toFixed(2);
+	const BMI = weight/(height*height);
 
   	res.send(`<h1>Body Mass Index : ${BMI} </h1>`);
 });
